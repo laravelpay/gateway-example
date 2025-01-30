@@ -71,6 +71,8 @@ class Gateway extends GatewayFoundation
         // For example, you might call a specific API to create the payment
         $checkout = Http::withToken($payment->gateway->config('secret_key'))
             ->post('https://example.app/api/v1/payment/create', [
+                    // The payment description
+                   'description' => $payment->description,
                     // the $payment->total() returns the total value of the payment
                    'amount' => $payment->total(),
                    'currency' => $payment->currency,
