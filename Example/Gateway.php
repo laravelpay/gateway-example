@@ -3,7 +3,7 @@
 namespace App\Gateways\Example;
 
 use Illuminate\Http\Request;
-use LaraPay\Framework\Foundation\GatewayFoundation;
+use LaraPay\Framework\Interfaces\GatewayFoundation;
 
 class Gateway extends GatewayFoundation
 {
